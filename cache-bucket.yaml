@@ -1,0 +1,14 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: "photo-album"
+spec:
+  additionalConfig:
+#    bucketclass: namespace-only
+#    bucketclass: backingstore-only
+#    bucketclass: mirroring-only
+    bucketclass: cache-only
+#    bucketclass: read-only
+#    bucketclass: read-only-test
+  generateBucketName: "photo-album"
+  storageClassName: openshift-storage.noobaa.io
